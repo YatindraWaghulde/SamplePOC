@@ -1,0 +1,18 @@
+create table customer(
+	customer_id int not null AUTO_INCREMENT,
+        first_name varchar(20),
+        last_name varchar(20),
+        dob date,
+        device_number bigInt(24),primary key(customer_id)
+);
+
+{
+	"firstName":"Sachin",
+	"lastName":"Tendulkar",
+	"deviceNumber":5432876535462347
+}
+
+
+keytool -genkey -alias ovfc -keyalg RSA -keystore D:\OneViewForCustomer\certificate\TestSigner.jks -keysize 2048 -validity 360
+changeit
+ 

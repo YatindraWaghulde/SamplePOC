@@ -1,0 +1,32 @@
+
+
+
+# Oracle settings
+spring:
+  devtools:
+    livereload:
+      enabled: true
+      
+  jpa:
+    database-platform : org.hibernate.dialect.MySQLDialect
+    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://localhost:3306/techm
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+    
+# properties for Security     
+server:
+  ssl:
+    key-store: classpath:TestSigner.jks
+    key-alias: ovfc
+    key-store-type: JKS
+    key-store-provider: SUN
+    enabled: true
+    key-password: changeit
+    

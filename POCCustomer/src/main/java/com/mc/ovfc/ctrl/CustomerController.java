@@ -1,0 +1,115 @@
+package com.mc.ovfc.ctrl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mc.ovfc.config.DataNotFoundException;
+import com.mc.ovfc.config.ErrorMessage;
+import com.mc.ovfc.model.CustomerDetails;
+import com.mc.ovfc.service.CustomerService;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
+@RestController
+@Api(value="customeroperactions", description="Operations pertaining to customer in Online")
+public class CustomerController {
+	
+	@Autowired
+	private CustomerService customerService;
+	
+	/**
+	 * return all customers from database
+	 * @return list of customer
+	 * @throws DataNotFoundException 
+	 */
+	@ApiOperation(value = "View a list of customers", response = Iterable.class)
+	@ApiResponses(value = {
+	        @ApiResponse(code = 200, message = "Successfully retrieved list of customers"),
+	        @ApiResponse(code = 401, message = "You are not authorized to view the resource"),
+	        @ApiResponse(code = 403, message = "Accessing the resource you were trying to reach is forbidden"),
+	        @ApiResponse(code = 404, message = "The resource you were trying to reach is not found")
+	}
+	)
+	@GetMapping(value="/customers")
+	public List<CustomerDetails> getcustomers() throws DataNotFoundException {
+		List<CustomerDetails> customerDetails = customerService.getcustomers();
+		if(customerDetails == null)
+			throw new DataNotFoundException("No record found.");
+		return customerDetails;
+	}
+	
+	/**
+	 * it will return customer object.
+	 * @param customerId
+	 * @return
+	 * @throws DataNotFoundException 
+	 */
+	@ApiOperation(value = "Fetch a Customer based on cuistomerId")
+	@GetMapping(value="/customers/{customerId}")
+	public Optional<CustomerDetails> getCustomer(@PathVariable Long customerId) throws DataNotFoundException {
+		Optional<CustomerDetails> cust = customerService.getCustomerById(customerId);
+		if (!cust.isPresent()) {
+			throw new DataNotFoundException("Customer Not Found with customer id : "+customerId);
+	    }
+		return cust;
+	}
+	
+	/**
+	 * update the customer details in database
+	 * @param customer
+	 * @return
+	 */
+	@ApiOperation(value = "Update a Customer")
+	@PutMapping(value="/customers")
+	public CustomerDetails updateCustomer(@RequestBody CustomerDetails customer) {
+		return customerService.updateCustomer(customer);
+	}
+	
+	
+	/**
+	 * Add new customer entry in database.
+	 * @param customerDetails
+	 * @return
+	 */
+	@ApiOperation(value = "Add a Customer")
+	@PostMapping(value="/customers")
+	public CustomerDetails insertCustomer(@RequestBody CustomerDetails customerDetails) {
+		return customerService.insertCustomer(customerDetails);
+	}
+	
+	
+	/**
+	 * it will return Response entity with error id and error message
+	 * @param ex
+	 * @return ResponseEntity with errorMessage and errorCode
+	 */
+	@ExceptionHandler(DataNotFoundException.class)
+	public ResponseEntity<ErrorMessage> exceptionHandler(Exception ex)
+	{
+		ErrorMessage errorMessage=new ErrorMessage();
+			errorMessage.setErrorCode(HttpStatus.NOT_FOUND.value());
+			errorMessage.setErrorMessage(ex.getMessage());
+			return new ResponseEntity<ErrorMessage>(errorMessage,HttpStatus.NOT_FOUND);
+	} 
+
+}
+
+
+
+
+
