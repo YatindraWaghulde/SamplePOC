@@ -1,0 +1,235 @@
+2018-Sep-18 16:29:58.453 INFO  [main] c.d.p.c.CustomerControllerTest - Starting CustomerControllerTest on INPUHJPC09950 with PID 7348 (started by Yatindra in D:\OneViewForCustomer\workspace\SamplePOC\POCCustomer)
+2018-Sep-18 16:29:58.454 INFO  [main] c.d.p.c.CustomerControllerTest - No active profile set, falling back to default profiles: default
+2018-Sep-18 16:29:58.493 INFO  [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@15f47664: startup date [Tue Sep 18 16:29:58 IST 2018]; root of context hierarchy
+2018-Sep-18 16:29:59.887 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2f159f55] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-Sep-18 16:30:00.115 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2018-Sep-18 16:30:00.377 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2018-Sep-18 16:30:00.419 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:30:00.434 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-Sep-18 16:30:00.509 INFO  [main] o.h.Version - HHH000412: Hibernate Core {5.2.17.Final}
+2018-Sep-18 16:30:00.511 INFO  [main] o.h.c.Environment - HHH000206: hibernate.properties not found
+2018-Sep-18 16:30:00.547 INFO  [main] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-Sep-18 16:30:00.660 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-Sep-18 16:30:01.203 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:30:01.857 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-Sep-18 16:30:01.949 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers],methods=[GET]}" onto public java.util.List<com.demo.poc.model.CustomerDetails> com.demo.poc.ctrl.CustomerController.getcustomers() throws com.demo.poc.config.DataNotFoundException
+2018-Sep-18 16:30:01.950 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers/{customerId}],methods=[GET]}" onto public java.util.Optional<com.demo.poc.model.CustomerDetails> com.demo.poc.ctrl.CustomerController.getCustomer(java.lang.Long) throws com.demo.poc.config.DataNotFoundException
+2018-Sep-18 16:30:01.951 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers],methods=[PUT]}" onto public com.demo.poc.model.CustomerDetails com.demo.poc.ctrl.CustomerController.updateCustomer(com.demo.poc.model.CustomerDetails)
+2018-Sep-18 16:30:01.951 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers],methods=[POST]}" onto public com.demo.poc.model.CustomerDetails com.demo.poc.ctrl.CustomerController.insertCustomer(com.demo.poc.model.CustomerDetails)
+2018-Sep-18 16:30:01.954 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-Sep-18 16:30:01.961 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-Sep-18 16:30:01.962 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-Sep-18 16:30:01.963 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-Sep-18 16:30:01.967 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-Sep-18 16:30:01.967 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-Sep-18 16:30:02.311 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-Sep-18 16:30:02.514 INFO  [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@15f47664: startup date [Tue Sep 18 16:29:58 IST 2018]; root of context hierarchy
+2018-Sep-18 16:30:02.574 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-Sep-18 16:30:02.574 INFO  [main] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-Sep-18 16:30:02.823 INFO  [main] o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-Sep-18 16:30:02.824 INFO  [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2018-Sep-18 16:30:02.843 INFO  [main] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-Sep-18 16:30:02.855 INFO  [main] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2018-Sep-18 16:30:03.075 INFO  [main] c.d.p.c.CustomerControllerTest - Started CustomerControllerTest in 5.002 seconds (JVM running for 5.865)
+2018-Sep-18 16:30:03.207 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2018-Sep-18 16:30:03.207 INFO  [main] o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2018-Sep-18 16:30:03.250 INFO  [main] o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 41 ms
+2018-Sep-18 16:30:03.431 INFO  [main] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2018-Sep-18 16:30:03.431 INFO  [main] o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2018-Sep-18 16:30:03.434 INFO  [main] o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 3 ms
+2018-Sep-18 16:30:03.451 INFO  [Thread-3] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@15f47664: startup date [Tue Sep 18 16:29:58 IST 2018]; root of context hierarchy
+2018-Sep-18 16:30:03.454 INFO  [Thread-3] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2018-Sep-18 16:30:03.460 INFO  [Thread-3] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:30:03.463 INFO  [Thread-3] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-Sep-18 16:30:03.476 INFO  [Thread-3] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-Sep-18 16:30:40.155 INFO  [restartedMain] c.d.p.POCCustomerApplication - Starting POCCustomerApplication on INPUHJPC09950 with PID 19036 (D:\OneViewForCustomer\workspace\SamplePOC\POCCustomer\target\classes started by Yatindra in D:\OneViewForCustomer\workspace\SamplePOC\POCCustomer)
+2018-Sep-18 16:30:40.156 INFO  [restartedMain] c.d.p.POCCustomerApplication - No active profile set, falling back to default profiles: default
+2018-Sep-18 16:30:40.186 INFO  [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3cf4d5e1: startup date [Tue Sep 18 16:30:40 IST 2018]; root of context hierarchy
+2018-Sep-18 16:30:41.252 INFO  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f697b7cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-Sep-18 16:30:41.603 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 2020 (https)
+2018-Sep-18 16:30:41.620 INFO  [restartedMain] o.a.c.c.StandardService - Starting service [Tomcat]
+2018-Sep-18 16:30:41.620 INFO  [restartedMain] o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-Sep-18 16:30:41.624 INFO  [localhost-startStop-1] o.a.c.c.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk1.8.0_181/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_181/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_181/bin/../jre/lib/amd64;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files (x86)\nodejs\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181;C:\Users\Yatindra\AppData\Local\Microsoft\WindowsApps;;D:\spring-tool-suite-3.9.5.RELEASE-e4.8.0-win32-x86_64\sts-bundle\sts-3.9.5.RELEASE;;.]
+2018-Sep-18 16:30:41.741 INFO  [localhost-startStop-1] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2018-Sep-18 16:30:41.742 INFO  [localhost-startStop-1] o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 1555 ms
+2018-Sep-18 16:30:41.800 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-Sep-18 16:30:41.803 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-Sep-18 16:30:41.804 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-Sep-18 16:30:41.804 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-Sep-18 16:30:41.804 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-Sep-18 16:30:41.916 INFO  [restartedMain] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2018-Sep-18 16:30:42.044 INFO  [restartedMain] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2018-Sep-18 16:30:42.154 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:30:42.165 INFO  [restartedMain] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-Sep-18 16:30:42.212 INFO  [restartedMain] o.h.Version - HHH000412: Hibernate Core {5.2.17.Final}
+2018-Sep-18 16:30:42.213 INFO  [restartedMain] o.h.c.Environment - HHH000206: hibernate.properties not found
+2018-Sep-18 16:30:42.239 INFO  [restartedMain] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-Sep-18 16:30:42.316 INFO  [restartedMain] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-Sep-18 16:30:42.693 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:30:43.124 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-Sep-18 16:30:43.173 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers],methods=[GET]}" onto public java.util.List<com.demo.poc.model.CustomerDetails> com.demo.poc.ctrl.CustomerController.getcustomers() throws com.demo.poc.config.DataNotFoundException
+2018-Sep-18 16:30:43.175 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers/{customerId}],methods=[GET]}" onto public java.util.Optional<com.demo.poc.model.CustomerDetails> com.demo.poc.ctrl.CustomerController.getCustomer(java.lang.Long) throws com.demo.poc.config.DataNotFoundException
+2018-Sep-18 16:30:43.175 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers],methods=[PUT]}" onto public com.demo.poc.model.CustomerDetails com.demo.poc.ctrl.CustomerController.updateCustomer(com.demo.poc.model.CustomerDetails)
+2018-Sep-18 16:30:43.176 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers],methods=[POST]}" onto public com.demo.poc.model.CustomerDetails com.demo.poc.ctrl.CustomerController.insertCustomer(com.demo.poc.model.CustomerDetails)
+2018-Sep-18 16:30:43.177 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-Sep-18 16:30:43.179 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-Sep-18 16:30:43.182 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-Sep-18 16:30:43.183 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-Sep-18 16:30:43.185 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-Sep-18 16:30:43.185 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-Sep-18 16:30:43.320 INFO  [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-Sep-18 16:30:43.447 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3cf4d5e1: startup date [Tue Sep 18 16:30:40 IST 2018]; root of context hierarchy
+2018-Sep-18 16:30:43.484 INFO  [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-Sep-18 16:30:43.484 INFO  [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-Sep-18 16:30:43.672 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-Sep-18 16:30:43.696 INFO  [restartedMain] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-Sep-18 16:30:43.697 INFO  [restartedMain] o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-Sep-18 16:30:43.702 INFO  [restartedMain] o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-Sep-18 16:30:43.706 INFO  [restartedMain] o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-Sep-18 16:30:43.706 INFO  [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2018-Sep-18 16:30:43.716 INFO  [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-Sep-18 16:30:43.725 INFO  [restartedMain] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2018-Sep-18 16:30:44.056 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 2020 (https) with context path ''
+2018-Sep-18 16:30:44.059 INFO  [restartedMain] c.d.p.POCCustomerApplication - Started POCCustomerApplication in 4.173 seconds (JVM running for 4.728)
+2018-Sep-18 16:35:48.867 INFO  [Thread-6] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3cf4d5e1: startup date [Tue Sep 18 16:30:40 IST 2018]; root of context hierarchy
+2018-Sep-18 16:35:48.870 INFO  [Thread-6] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2018-Sep-18 16:35:48.871 INFO  [Thread-6] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2018-Sep-18 16:35:48.871 INFO  [Thread-6] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2018-Sep-18 16:35:48.873 INFO  [Thread-6] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:35:48.874 INFO  [Thread-6] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-Sep-18 16:35:48.877 INFO  [Thread-6] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-Sep-18 16:35:49.149 INFO  [restartedMain] c.d.p.POCCustomerApplication - Starting POCCustomerApplication on INPUHJPC09950 with PID 19036 (D:\OneViewForCustomer\workspace\SamplePOC\POCCustomer\target\classes started by Yatindra in D:\OneViewForCustomer\workspace\SamplePOC\POCCustomer)
+2018-Sep-18 16:35:49.149 INFO  [restartedMain] c.d.p.POCCustomerApplication - No active profile set, falling back to default profiles: default
+2018-Sep-18 16:35:49.151 INFO  [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3bc1c04: startup date [Tue Sep 18 16:35:49 IST 2018]; root of context hierarchy
+2018-Sep-18 16:35:49.560 INFO  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f697b7cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-Sep-18 16:35:49.683 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 2020 (https)
+2018-Sep-18 16:35:49.684 INFO  [restartedMain] o.a.c.c.StandardService - Starting service [Tomcat]
+2018-Sep-18 16:35:49.684 INFO  [restartedMain] o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-Sep-18 16:35:49.712 INFO  [localhost-startStop-1] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2018-Sep-18 16:35:49.713 INFO  [localhost-startStop-1] o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 562 ms
+2018-Sep-18 16:35:49.728 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-Sep-18 16:35:49.729 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-Sep-18 16:35:49.729 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-Sep-18 16:35:49.729 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-Sep-18 16:35:49.729 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-Sep-18 16:35:49.766 INFO  [restartedMain] c.z.h.HikariDataSource - HikariPool-2 - Starting...
+2018-Sep-18 16:35:49.773 INFO  [restartedMain] c.z.h.HikariDataSource - HikariPool-2 - Start completed.
+2018-Sep-18 16:35:49.777 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:35:49.778 INFO  [restartedMain] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-Sep-18 16:35:49.786 INFO  [restartedMain] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-Sep-18 16:35:49.814 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:35:49.823 WARN  [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerController' defined in file [D:\OneViewForCustomer\workspace\SamplePOC\POCCustomer\target\classes\com\demo\poc\ctrl\CustomerController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.demo.poc.ctrl.CustomerController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method getLogger(Class<capture#1-of ? extends CustomerController>) is undefined for the type LoggerFactory
+
+2018-Sep-18 16:35:49.823 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:35:49.823 INFO  [restartedMain] c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2018-Sep-18 16:35:49.824 INFO  [restartedMain] c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed.
+2018-Sep-18 16:35:49.825 INFO  [restartedMain] o.a.c.c.StandardService - Stopping service [Tomcat]
+2018-Sep-18 16:35:49.831 INFO  [restartedMain] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-Sep-18 16:35:49.839 ERROR [restartedMain] o.s.b.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerController' defined in file [D:\OneViewForCustomer\workspace\SamplePOC\POCCustomer\target\classes\com\demo\poc\ctrl\CustomerController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.demo.poc.ctrl.CustomerController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method getLogger(Class<capture#1-of ? extends CustomerController>) is undefined for the type LoggerFactory
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1229) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1128) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246) [spring-boot-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+	at com.demo.poc.POCCustomerApplication.main(POCCustomerApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_181]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.0.4.RELEASE.jar:2.0.4.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.demo.poc.ctrl.CustomerController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problem: 
+	The method getLogger(Class<capture#1-of ? extends CustomerController>) is undefined for the type LoggerFactory
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:182) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1221) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 22 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The method getLogger(Class<capture#1-of ? extends CustomerController>) is undefined for the type LoggerFactory
+
+	at com.demo.poc.ctrl.CustomerController.<init>(CustomerController.java:32) ~[classes/:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_181]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_181]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_181]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_181]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170) ~[spring-beans-5.0.8.RELEASE.jar:5.0.8.RELEASE]
+	... 24 common frames omitted
+2018-Sep-18 16:38:10.174 INFO  [restartedMain] c.d.p.POCCustomerApplication - Starting POCCustomerApplication on INPUHJPC09950 with PID 19036 (D:\OneViewForCustomer\workspace\SamplePOC\POCCustomer\target\classes started by Yatindra in D:\OneViewForCustomer\workspace\SamplePOC\POCCustomer)
+2018-Sep-18 16:38:10.175 INFO  [restartedMain] c.d.p.POCCustomerApplication - No active profile set, falling back to default profiles: default
+2018-Sep-18 16:38:10.176 INFO  [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@66abf0e6: startup date [Tue Sep 18 16:38:10 IST 2018]; root of context hierarchy
+2018-Sep-18 16:38:10.600 INFO  [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f697b7cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-Sep-18 16:38:10.719 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 2020 (https)
+2018-Sep-18 16:38:10.720 INFO  [restartedMain] o.a.c.c.StandardService - Starting service [Tomcat]
+2018-Sep-18 16:38:10.720 INFO  [restartedMain] o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.32
+2018-Sep-18 16:38:10.744 INFO  [localhost-startStop-1] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2018-Sep-18 16:38:10.745 INFO  [localhost-startStop-1] o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 569 ms
+2018-Sep-18 16:38:10.761 INFO  [localhost-startStop-1] o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-Sep-18 16:38:10.762 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-Sep-18 16:38:10.762 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-Sep-18 16:38:10.762 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-Sep-18 16:38:10.762 INFO  [localhost-startStop-1] o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-Sep-18 16:38:10.800 INFO  [restartedMain] c.z.h.HikariDataSource - HikariPool-3 - Starting...
+2018-Sep-18 16:38:10.804 INFO  [restartedMain] c.z.h.HikariDataSource - HikariPool-3 - Start completed.
+2018-Sep-18 16:38:10.809 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:38:10.809 INFO  [restartedMain] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-Sep-18 16:38:10.817 INFO  [restartedMain] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-Sep-18 16:38:10.844 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:38:10.965 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-Sep-18 16:38:10.975 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers],methods=[GET]}" onto public java.util.List<com.demo.poc.model.CustomerDetails> com.demo.poc.ctrl.CustomerController.getcustomers() throws com.demo.poc.config.DataNotFoundException
+2018-Sep-18 16:38:10.975 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers/{customerId}],methods=[GET]}" onto public java.util.Optional<com.demo.poc.model.CustomerDetails> com.demo.poc.ctrl.CustomerController.getCustomer(java.lang.Long) throws com.demo.poc.config.DataNotFoundException
+2018-Sep-18 16:38:10.975 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers],methods=[PUT]}" onto public com.demo.poc.model.CustomerDetails com.demo.poc.ctrl.CustomerController.updateCustomer(com.demo.poc.model.CustomerDetails)
+2018-Sep-18 16:38:10.976 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/customers],methods=[POST]}" onto public com.demo.poc.model.CustomerDetails com.demo.poc.ctrl.CustomerController.insertCustomer(com.demo.poc.model.CustomerDetails)
+2018-Sep-18 16:38:10.976 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-Sep-18 16:38:10.978 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-Sep-18 16:38:10.978 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-Sep-18 16:38:10.978 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-Sep-18 16:38:10.980 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-Sep-18 16:38:10.980 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-Sep-18 16:38:11.013 INFO  [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-Sep-18 16:38:11.041 INFO  [restartedMain] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@66abf0e6: startup date [Tue Sep 18 16:38:10 IST 2018]; root of context hierarchy
+2018-Sep-18 16:38:11.052 INFO  [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-Sep-18 16:38:11.052 INFO  [restartedMain] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-Sep-18 16:38:11.102 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-Sep-18 16:38:11.119 INFO  [restartedMain] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2018-Sep-18 16:38:11.120 INFO  [restartedMain] o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-Sep-18 16:38:11.123 INFO  [restartedMain] o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-Sep-18 16:38:11.125 INFO  [restartedMain] o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+2018-Sep-18 16:38:11.125 INFO  [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2018-Sep-18 16:38:11.126 INFO  [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-Sep-18 16:38:11.128 INFO  [restartedMain] s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2018-Sep-18 16:38:11.202 INFO  [restartedMain] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 2020 (https) with context path ''
+2018-Sep-18 16:38:11.203 INFO  [restartedMain] c.d.p.POCCustomerApplication - Started POCCustomerApplication in 1.054 seconds (JVM running for 451.872)
+2018-Sep-18 16:38:11.206 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2018-Sep-18 16:40:36.379 INFO  [Thread-10] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@66abf0e6: startup date [Tue Sep 18 16:38:10 IST 2018]; root of context hierarchy
+2018-Sep-18 16:40:36.381 INFO  [Thread-10] o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+2018-Sep-18 16:40:36.382 INFO  [Thread-10] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2018-Sep-18 16:40:36.382 INFO  [Thread-10] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2018-Sep-18 16:40:36.383 INFO  [Thread-10] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-Sep-18 16:40:36.384 INFO  [Thread-10] c.z.h.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2018-Sep-18 16:40:36.389 INFO  [Thread-10] c.z.h.HikariDataSource - HikariPool-3 - Shutdown completed.

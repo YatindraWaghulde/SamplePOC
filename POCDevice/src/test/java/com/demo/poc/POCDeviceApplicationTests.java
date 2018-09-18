@@ -1,4 +1,4 @@
-package com.mc.techm;
+package com.demo.poc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

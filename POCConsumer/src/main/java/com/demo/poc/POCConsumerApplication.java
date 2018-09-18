@@ -23,17 +23,17 @@ public class POCConsumerApplication {
 	
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
+		return new RestTemplate();
 	}
 
-	@Bean
-	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
-		return args -> {
-			TransactionDetails quote = restTemplate.getForObject(
-					"http://localhost:2030/v2/masterCard/transaction/1", TransactionDetails.class);
-			log.info(quote.toString());
-		};
-	}
+//	@Bean
+//	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
+//		return args -> {
+//			TransactionDetails quote = restTemplate.getForObject(
+//					"http://localhost:2030/v2/masterCard/transaction/1", TransactionDetails.class);
+//			log.info(quote.toString());
+//		};
+//	}
 	
 	
 	

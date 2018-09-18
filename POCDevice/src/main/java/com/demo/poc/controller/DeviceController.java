@@ -25,7 +25,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/v1/masterCard")
+@RequestMapping("/v1/demo")
 @Api(value="Employee's API",description="Sample API for 1V4C")
 public class DeviceController 
 {
@@ -40,7 +40,7 @@ public class DeviceController
 	public Optional<DeviceDetails> getDevice(@PathVariable("deviceNumber") long deviceNumber) throws DeviceNotFoundException{
 	
 		if(service.getDevice(deviceNumber)==null)
-			throw new DeviceNotFoundException("Entered Device Number "+deviceNumber+" is not Available");
+			throw new DeviceNotFoundException("Entered Device Number is not Available");
 		return service.getDevice(deviceNumber);
 	}
 	

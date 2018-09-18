@@ -23,7 +23,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/v2/masterCard")
+@RequestMapping("/v2/demo")
 @Api(value="Employee's API",description="Sample API for 1V4C")
 public class TransactionController 
 {

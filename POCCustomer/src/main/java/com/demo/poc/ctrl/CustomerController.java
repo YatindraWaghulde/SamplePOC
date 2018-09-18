@@ -3,6 +3,8 @@ package com.demo.poc.ctrl;
 import java.util.List;
 import java.util.Optional;
 
+import org.hibernate.annotations.common.util.impl.LoggerFactory;
+import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +29,7 @@ import io.swagger.annotations.ApiResponses;
 @RestController
 @Api(value="customeroperactions", description="Operations pertaining to customer in Online")
 public class CustomerController {
+	private final Logger LOGGER = LoggerFactory.logger(this.getClass());
 	
 	@Autowired
 	private CustomerService customerService;
@@ -61,6 +64,7 @@ public class CustomerController {
 	@ApiOperation(value = "Fetch a Customer based on cuistomerId")
 	@GetMapping(value="/customers/{customerId}")
 	public Optional<CustomerDetails> getCustomer(@PathVariable Long customerId) throws DataNotFoundException {
+		LOGGER.error("Inside getCustomer");
 		Optional<CustomerDetails> cust = customerService.getCustomerById(customerId);
 		if (!cust.isPresent()) {
 			throw new DataNotFoundException("Customer Not Found with customer id : "+customerId);
