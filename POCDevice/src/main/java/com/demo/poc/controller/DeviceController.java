@@ -1,4 +1,4 @@
-package com.mc.techm.controller;
+package com.demo.poc.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mc.techm.exception.DeviceNotFoundException;
-import com.mc.techm.model.CustomerDetails;
-import com.mc.techm.model.DeviceDetails;
-import com.mc.techm.model.ErrorMessage;
-import com.mc.techm.repository.CustomerRepository;
-import com.mc.techm.repository.DeviceRepository;
-import com.mc.techm.service.DeviceService;
+import com.demo.poc.exception.DeviceNotFoundException;
+import com.demo.poc.model.CustomerDetails;
+import com.demo.poc.model.DeviceDetails;
+import com.demo.poc.model.ErrorMessage;
+import com.demo.poc.repository.CustomerRepository;
+import com.demo.poc.repository.DeviceRepository;
+import com.demo.poc.service.DeviceService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

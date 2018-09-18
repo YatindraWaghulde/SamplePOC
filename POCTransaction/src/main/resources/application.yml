@@ -23,7 +23,7 @@ logging:
               hibernate:
                         SQL: debug              
 server:
-       port: 2030
+       port: 2023
   
 lombok: 
       accessors:

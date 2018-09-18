@@ -9,11 +9,15 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModelProperty;
 
@@ -38,18 +42,19 @@ public class CustomerDetails implements Serializable{
 	
 	@ApiModelProperty(notes = "Customer date of birth")
 	@Column(name="dob")
+//	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
 	private Date dob;
 	
 	@ApiModelProperty(notes = "device number (card number) ")
-//	@Column(name="device_number")
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="customerDetails")
-	private Set<DeviceDetails> deviceDetails = new HashSet<>();
+	@OneToMany(cascade=CascadeType.ALL,fetch = FetchType.LAZY)
+	@JoinColumn(name = "customer_id",referencedColumnName="customer_id")
+	private List<DeviceDetails> deviceDetails ;
 	
 	public CustomerDetails() {
 		super();
 	}
 	
-	public CustomerDetails(Long customerId, String firstName, String lastName, Date dob, Set<DeviceDetails> deviceDetails) {
+	public CustomerDetails(Long customerId, String firstName, String lastName, Date dob, List<DeviceDetails> deviceDetails) {
 		super();
 		this.customerId = customerId;
 		this.firstName = firstName;
@@ -84,11 +89,11 @@ public class CustomerDetails implements Serializable{
 	public void setDob(Date dob) {
 		this.dob = dob;
 	}
-	public Set<DeviceDetails> getDeviceDetails() {
+	public List<DeviceDetails> getDeviceDetails() {
 		return deviceDetails;
 	}
-	public void setDeviceDetails(Set<DeviceDetails> deviceDetails) {
+	public void setDeviceDetails(List<DeviceDetails> deviceDetails) {
 		this.deviceDetails = deviceDetails;
 	}
 	
-} 
+}

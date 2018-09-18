@@ -1,8 +1,8 @@
-package com.mc.techm.repository;
+package com.demo.poc.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.mc.techm.model.CustomerDetails;
+import com.demo.poc.model.CustomerDetails;
 
 public interface CustomerRepository extends CrudRepository<CustomerDetails, Long>{
 

@@ -1,4 +1,4 @@
-package com.mc.techm.exception;
+package com.demo.poc.exception;
 
 public class DeviceNotFoundException extends Exception{
 	

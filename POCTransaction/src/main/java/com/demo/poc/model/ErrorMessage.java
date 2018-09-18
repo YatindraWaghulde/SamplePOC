@@ -1,4 +1,4 @@
-package com.transaction.demo.model;
+package com.demo.poc.model;
 
 public class ErrorMessage {
 	

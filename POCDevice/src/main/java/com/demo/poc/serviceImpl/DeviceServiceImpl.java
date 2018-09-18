@@ -1,4 +1,4 @@
-package com.mc.techm.serviceImpl;
+package com.demo.poc.serviceImpl;
 
 public class DeviceServiceImpl {
 

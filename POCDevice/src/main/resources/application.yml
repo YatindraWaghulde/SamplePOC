@@ -23,7 +23,7 @@ logging:
               hibernate:
                         SQL: debug              
 server:
-       port: 2020
+       port: 2021
   
 lombok: 
       accessors:

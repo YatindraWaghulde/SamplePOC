@@ -1,4 +1,4 @@
-package com.transaction.demo.service;
+package com.demo.poc.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.transaction.demo.model.TransactionDetails;
-import com.transaction.demo.repository.TransactionRepository;
+import com.demo.poc.model.TransactionDetails;
+import com.demo.poc.repository.TransactionRepository;
 
 @Service
 public class TransactionService {

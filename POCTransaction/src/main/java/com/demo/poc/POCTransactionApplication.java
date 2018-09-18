@@ -1,12 +1,12 @@
-package com.transaction.demo;
+package com.demo.poc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OneViewForTransactionApplication {
+public class POCTransactionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OneViewForTransactionApplication.class, args);
+		SpringApplication.run(POCTransactionApplication.class, args);
 	}
 }

@@ -1,12 +1,12 @@
-package com.mc.techm;
+package com.demo.poc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OneViewForCustomerApplication {
+public class POCDeviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OneViewForCustomerApplication.class, args);
+		SpringApplication.run(POCDeviceApplication.class, args);
 	}
 }

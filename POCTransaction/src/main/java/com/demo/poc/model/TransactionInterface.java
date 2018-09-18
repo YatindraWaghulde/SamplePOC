@@ -1,4 +1,4 @@
-package com.transaction.demo.model;
+package com.demo.poc.model;
 
 import java.util.List;
 import java.util.Optional;

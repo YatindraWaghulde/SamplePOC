@@ -1,4 +1,4 @@
-package com.transaction.demo.controller;
+package com.demo.poc.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.transaction.demo.exception.TransactionNotFoundException;
-import com.transaction.demo.model.ErrorMessage;
-import com.transaction.demo.model.TransactionDetails;
-import com.transaction.demo.repository.TransactionRepository;
-import com.transaction.demo.service.TransactionService;
+import com.demo.poc.exception.TransactionNotFoundException;
+import com.demo.poc.model.ErrorMessage;
+import com.demo.poc.model.TransactionDetails;
+import com.demo.poc.repository.TransactionRepository;
+import com.demo.poc.service.TransactionService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

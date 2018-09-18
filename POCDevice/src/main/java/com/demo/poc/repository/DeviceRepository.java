@@ -1,8 +1,8 @@
-package com.mc.techm.repository;
+package com.demo.poc.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.mc.techm.model.DeviceDetails;
+import com.demo.poc.model.DeviceDetails;
 
 public interface DeviceRepository extends CrudRepository<DeviceDetails, Long>{
 

@@ -1,4 +1,4 @@
-package com.demo.poc.model;
+package com.demo.poc.config;
 
 public class ErrorMessage {
 	
@@ -18,4 +18,4 @@ public class ErrorMessage {
 		this.errorCode = errorCode;
 	}
 	
-}
+} 

@@ -1,4 +1,4 @@
-package com.mc.techm.service;
+package com.demo.poc.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +7,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mc.techm.model.CustomerDetails;
-import com.mc.techm.model.DeviceDetails;
-import com.mc.techm.repository.DeviceRepository;
+import com.demo.poc.model.CustomerDetails;
+import com.demo.poc.model.DeviceDetails;
+import com.demo.poc.repository.DeviceRepository;
 
 @Service
 public class DeviceService {

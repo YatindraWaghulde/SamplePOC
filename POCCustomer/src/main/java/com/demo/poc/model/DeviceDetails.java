@@ -1,4 +1,5 @@
 package com.demo.poc.model;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -13,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 @Entity
 @Table(name="device_details")
@@ -24,14 +26,14 @@ public class DeviceDetails implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long deviceNumber;
+	private Integer deviceNumber;
 	
 	private String deviceType;
 	private Date expDate;
 	private Integer txnLimit;
 	
 	@JsonIgnore
-	 @ManyToOne(fetch = FetchType.LAZY,cascade=CascadeType.ALL)
+	 @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 	 @JoinColumn(name = "customer_id")
 	 private CustomerDetails customerDetails;
 	
@@ -42,7 +44,8 @@ public class DeviceDetails implements Serializable{
 	public void setCustomerDetails(CustomerDetails customerDetails) {
 		this.customerDetails = customerDetails;
 	}
-	public DeviceDetails(Long deviceNumber, String deviceType, Date expDate, Integer txnLimit,CustomerDetails customerDetails) {
+	
+	public DeviceDetails(Integer deviceNumber, String deviceType, Date expDate, Integer txnLimit,CustomerDetails customerDetails) {
 		super();
 		this.deviceNumber = deviceNumber;
 		this.deviceType = deviceType;
@@ -50,7 +53,7 @@ public class DeviceDetails implements Serializable{
 		this.txnLimit = txnLimit;
 		this.customerDetails = customerDetails;
 	}
-	public void setDeviceNumber(Long deviceNumber) {
+	public void setDeviceNumber(Integer deviceNumber) {
 		this.deviceNumber = deviceNumber;
 	}
 	public void setDeviceType(String deviceType) {
@@ -62,20 +65,8 @@ public class DeviceDetails implements Serializable{
 	public void setTxnLimit(Integer txnLimit) {
 		this.txnLimit = txnLimit;
 	}
-	public Long getDeviceNumber() {
-		return deviceNumber;
-	}
-	public String getDeviceType() {
-		return deviceType;
-	}
-	public Date getExpDate() {
-		return expDate;
-	}
-	public Integer getTxnLimit() {
-		return txnLimit;
-	}
 	                                                                                                                                                                                                                                                                                               
 	
 	
 	
-} 
+}

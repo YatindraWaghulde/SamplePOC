@@ -1,4 +1,4 @@
-package com.transaction.demo.exception;
+package com.demo.poc.exception;
 
 public class TransactionNotFoundException extends Exception{
 	

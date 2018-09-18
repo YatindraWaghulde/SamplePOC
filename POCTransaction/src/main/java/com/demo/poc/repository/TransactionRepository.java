@@ -1,8 +1,8 @@
-package com.transaction.demo.repository;
+package com.demo.poc.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.transaction.demo.model.TransactionDetails;
+import com.demo.poc.model.TransactionDetails;
 
 public interface TransactionRepository extends CrudRepository<TransactionDetails, Long>{
 

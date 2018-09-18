@@ -1,4 +1,4 @@
-package com.transaction.demo.model;
+package com.demo.poc.model;
 import java.io.Serializable;
 import java.util.Date;
 

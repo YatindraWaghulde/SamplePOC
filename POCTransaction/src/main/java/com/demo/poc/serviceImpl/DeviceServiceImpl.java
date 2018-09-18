@@ -1,4 +1,4 @@
-package com.transaction.demo.serviceImpl;
+package com.demo.poc.serviceImpl;
 
 public class DeviceServiceImpl {
 

@@ -22,6 +22,7 @@ spring:
     
 # properties for Security     
 server:
+  port: 2020
   ssl:
     key-store: classpath:TestSigner.jks
     key-alias: ovfc

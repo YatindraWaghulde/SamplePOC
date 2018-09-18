@@ -1,4 +1,4 @@
-package com.mc.ovfc.ctrl;
+package com.demo.poc.ctrl;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,8 +13,9 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.mc.ovfc.model.CustomerDetails;
-import com.mc.ovfc.service.CustomerService;
+import com.demo.poc.ctrl.CustomerController;
+import com.demo.poc.model.CustomerDetails;
+import com.demo.poc.service.CustomerService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(value = CustomerController.class, secure = false)
