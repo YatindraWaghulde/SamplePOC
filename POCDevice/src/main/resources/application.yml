@@ -1,0 +1,32 @@
+spring:
+      jpa:
+          hibernate:
+                    ddl-auto: update
+                    
+          database-platform: org.hibernate.dialect.MySQLDialect    
+          show-sql: true
+          
+                        
+
+      datasource:
+                  url: jdbc:mysql://localhost:3306/techm
+                  username: root
+                  password: admin
+                  driver.class : com.mysql.jdbc.Driver      
+                            
+logging:
+      pattern:
+              console: yyyy-MM-dd HH:mm:ss %-5level %logger{36} - %msg%n
+                
+      level:
+          org:
+              hibernate:
+                        SQL: debug              
+server:
+       port: 2020
+  
+lombok: 
+      accessors:
+               chain: true   
+                   
+               fluent: true    
