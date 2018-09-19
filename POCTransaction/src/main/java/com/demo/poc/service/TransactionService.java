@@ -30,9 +30,9 @@ public class TransactionService {
 		return txn;
 	}
 	
-	public void addTransaction(TransactionDetails txn)
+	public TransactionDetails addTransaction(TransactionDetails txn)
 	{		
-		repository.save(txn);
+		return repository.save(txn);
 	}
 	
 	public void updateTransaction(TransactionDetails txn)
@@ -45,4 +45,4 @@ public class TransactionService {
 		repository.deleteById(txn);
 	}
 		
-}
+} 

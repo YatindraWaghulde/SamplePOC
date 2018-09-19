@@ -23,7 +23,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/v2/demo")
+@RequestMapping("/v2/masterCard")
 @Api(value="Employee's API",description="Sample API for 1V4C")
 public class TransactionController 
 {
@@ -31,14 +31,14 @@ public class TransactionController
 	private TransactionService service;
 	
 	@Autowired
-	TransactionRepository custRepo;
+	TransactionRepository repository;
 	
 	@ApiOperation(value="Returns the transaction with specified txnId")
 	@RequestMapping(method=RequestMethod.GET,value="/transaction/{txn}")
 	public Optional<TransactionDetails> getTransaction(@PathVariable Long txn) throws TransactionNotFoundException{
 	
 		if(service.getTransaction(txn)==null)
-			throw new TransactionNotFoundException("Entered Transaction Number "+txn+" is not Available");
+			throw new TransactionNotFoundException("Entered Transaction Number is not Available");
 		return service.getTransaction(txn);
 	}
 	
@@ -50,15 +50,13 @@ public class TransactionController
 	
 	@ApiOperation(value="Add the transaction")
 	@RequestMapping(method=RequestMethod.POST,value="/transactions")
-	public void addDevice(@RequestBody TransactionDetails txn)
-	{
-		service.addTransaction(txn);
+	public TransactionDetails addTransaction(@RequestBody TransactionDetails txn){
+		return service.addTransaction(txn);
 	}
 	
 	@ApiOperation(value="Update the transaction")
 	@RequestMapping(method=RequestMethod.PUT,value="/transactions/{txn}")
-	public void updateTransaction(@RequestBody TransactionDetails transactions)
-	{
+	public void updateTransaction(@RequestBody TransactionDetails transactions){
 		service.updateTransaction(transactions);
 	}
 	
@@ -69,12 +67,11 @@ public class TransactionController
 	}
 		
 	@ExceptionHandler(TransactionNotFoundException.class)
-	public ResponseEntity<ErrorMessage> exceptionHandler(Exception ex)
-	{
+	public ResponseEntity<ErrorMessage> exceptionHandler(Exception ex){
 		ErrorMessage errorMessage=new ErrorMessage();
 			errorMessage.setErrorCode(HttpStatus.NOT_FOUND.value());
 			errorMessage.setErrorMessage(ex.getMessage());
 			return new ResponseEntity<ErrorMessage>(errorMessage,HttpStatus.NOT_FOUND);
 	}
 	
-}
+} 
