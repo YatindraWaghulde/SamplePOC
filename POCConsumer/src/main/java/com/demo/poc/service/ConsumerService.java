@@ -29,9 +29,7 @@ public class ConsumerService {
 			 response = template.getForEntity(uri,DeviceDetails.class);
 		}
 		catch (Exception e) {
-			System.out.println("Error Message is  ====== > "+e.getMessage());
 		}
-		System.out.println(response);
 		if(response==null)
 			throw new DeviceNotFoundException("Entered Device Number "+deviceNumber+" is not Available or Device Service is Unavailable at the time");
 		
@@ -40,16 +38,7 @@ public class ConsumerService {
 				deviceDetails.setExpDate(response.getBody().getExpDate());
 				deviceDetails.setTxnLimit(response.getBody().getTxnLimit());
 		
-				System.out.println(response.getBody().getDeviceNumber());
-				System.out.println(response.getBody().getDeviceType());
-				System.out.println(response.getBody().getExpDate());
-				System.out.println(response.getBody().getTxnLimit());
-				
-		System.out.println(response);
 		return deviceDetails;
-		
-		
-		
 		
 		
 	}

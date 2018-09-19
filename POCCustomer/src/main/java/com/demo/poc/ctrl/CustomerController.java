@@ -50,8 +50,10 @@ public class CustomerController {
 	@GetMapping(value="/customers")
 	public List<CustomerDetails> getcustomers() throws DataNotFoundException {
 		List<CustomerDetails> customerDetails = customerService.getcustomers();
-		if(customerDetails == null)
+		if(customerDetails == null) {
+			LOGGER.error("No record found.");
 			throw new DataNotFoundException("No record found.");
+		}
 		return customerDetails;
 	}
 	
@@ -80,6 +82,7 @@ public class CustomerController {
 	@ApiOperation(value = "Update a Customer")
 	@PutMapping(value="/customers")
 	public CustomerDetails updateCustomer(@RequestBody CustomerDetails customer) {
+		LOGGER.info("updating customer record.");
 		return customerService.updateCustomer(customer);
 	}
 	
@@ -92,6 +95,7 @@ public class CustomerController {
 	@ApiOperation(value = "Add a Customer")
 	@PostMapping(value="/customers")
 	public CustomerDetails insertCustomer(@RequestBody CustomerDetails customerDetails) {
+		LOGGER.info("adding customer record.");
 		return customerService.insertCustomer(customerDetails);
 	}
 	
@@ -104,6 +108,7 @@ public class CustomerController {
 	@ExceptionHandler(DataNotFoundException.class)
 	public ResponseEntity<ErrorMessage> exceptionHandler(Exception ex)
 	{
+		LOGGER.info("Exception occured."+ex);
 		ErrorMessage errorMessage=new ErrorMessage();
 			errorMessage.setErrorCode(HttpStatus.NOT_FOUND.value());
 			errorMessage.setErrorMessage(ex.getMessage());

@@ -22,7 +22,7 @@ public class POCConsumerApplication {
 	
 	
 	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+	public RestTemplate restTemplate() {
 		return new RestTemplate();
 	}
 

@@ -23,21 +23,21 @@ spring:
 # properties for Security     
 server:
   port: 2020
-  ssl:
-    key-store: classpath:TestSigner.jks
-    key-alias: ovfc
-    key-store-type: JKS
-    key-store-provider: SUN
-    enabled: true
-    key-password: changeit
+#  ssl:
+#    key-store: classpath:TestSigner.jks
+#    key-alias: ovfc
+#    key-store-type: JKS
+#    key-store-provider: SUN
+#    enabled: true
+#    key-password: changeit
 
 #Logging
 logging:
   file: D:\OneViewForCustomer\workspace\SamplePOC\poc_log.log
   level:
-    org:
-      springframework:
-        security: DEBUG
+#    org:
+#      springframework:
+#        security: DEBUG
     hibernate: DEBUG
     
   path: concretepage/logs

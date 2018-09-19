@@ -18,7 +18,6 @@ import com.demo.poc.model.CustomerDetails;
 import com.demo.poc.model.DeviceDetails;
 import com.demo.poc.model.ErrorMessage;
 import com.demo.poc.repository.CustomerRepository;
-import com.demo.poc.repository.DeviceRepository;
 import com.demo.poc.service.DeviceService;
 
 import io.swagger.annotations.Api;
@@ -26,7 +25,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/v1/demo")
-@Api(value="Employee's API",description="Sample API for 1V4C")
+@Api(value="Device API",description="Sample API for 1V4C")
 public class DeviceController 
 {
 	@Autowired
