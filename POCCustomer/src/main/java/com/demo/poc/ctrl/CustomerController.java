@@ -20,6 +20,7 @@ import com.demo.poc.config.DataNotFoundException;
 import com.demo.poc.config.ErrorMessage;
 import com.demo.poc.model.CustomerDetails;
 import com.demo.poc.service.CustomerService;
+import com.demo.poc.vo.CustomerDetailsVO;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -65,9 +66,9 @@ public class CustomerController {
 	 */
 	@ApiOperation(value = "Fetch a Customer based on cuistomerId")
 	@GetMapping(value="/customers/{customerId}")
-	public Optional<CustomerDetails> getCustomer(@PathVariable Long customerId) throws DataNotFoundException {
+	public Optional<CustomerDetailsVO> getCustomer(@PathVariable Long customerId) throws DataNotFoundException {
 		LOGGER.error("Inside getCustomer");
-		Optional<CustomerDetails> cust = customerService.getCustomerById(customerId);
+		Optional<CustomerDetailsVO> cust = customerService.getCustomerById(customerId);
 		if (!cust.isPresent()) {
 			throw new DataNotFoundException("Customer Not Found with customer id : "+customerId);
 	    }

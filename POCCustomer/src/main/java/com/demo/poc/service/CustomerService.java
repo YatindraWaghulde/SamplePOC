@@ -4,12 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import com.demo.poc.model.CustomerDetails;
+import com.demo.poc.vo.CustomerDetailsVO;
 
 public interface CustomerService {
 
 	List<CustomerDetails> getcustomers();
 
-	Optional<CustomerDetails> getCustomerById(Long customerId);
+	Optional<CustomerDetailsVO> getCustomerById(Long customerId);
 
 	CustomerDetails updateCustomer(CustomerDetails customer);
 

@@ -1,7 +1,11 @@
 package com.demo.poc.ctrl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -30,18 +34,15 @@ public class ConsumerController
 	@Autowired
 	private RestTemplate restTemplate;
 	
-	@Value("${uriforaddcustomer}")
-	private String uriForAddCustomer;
+	@Value("${uriforcustomer}")
+	private String uriForCustomer;
 	@Value("${uriforadddevice}")
 	private String uriForAddDevice;
 	
 	@Autowired
 	private ConsumerService service;
-	
-	
-
-	
-	DeviceDetails detail;
+		
+	private DeviceDetails detail;
 	
 	@ApiOperation(value="Returns the device with specified deviceId")
 	@RequestMapping(method=RequestMethod.GET,value="/devices/{deviceNumber}")
@@ -57,9 +58,8 @@ public class ConsumerController
 	public CustomerDetails addCustomer(@RequestBody CustomerDetails customer) throws DeviceNotFoundException {
 		CustomerDetails response = null;
 		try{
-			
 			Object obj[] = {}; 
-			 response = restTemplate.postForObject(uriForAddCustomer,customer,CustomerDetails.class,obj);
+			 response = restTemplate.postForObject(uriForCustomer,customer,CustomerDetails.class,obj);
 		}
 		catch (Exception e) {
 		}
@@ -78,15 +78,36 @@ public class ConsumerController
 	public ResponseEntity<CustomerDetails> getCustomer(@PathVariable("customerId") long customerId) throws DeviceNotFoundException{
 		ResponseEntity<CustomerDetails> response = null;
 		
-		String uri=uriForAddCustomer+"/"+customerId;
 		try{
-			 response = restTemplate.getForEntity("http://localhost:2020/customers/"+customerId,CustomerDetails.class);
+			 response = restTemplate.getForEntity(uriForCustomer+"/"+customerId,CustomerDetails.class);
 		}
 		catch (Exception e) {
 			System.out.println(e);
 		}
 		if(response==null)
-			throw new DeviceNotFoundException("Entered Device Number "+customerId+" is not Available or Device Service is Unavailable at the time");
+			throw new DeviceNotFoundException("Entered customer id "+customerId+" is not Available or Device Service is Unavailable at the time");
+
+		return response;
+	}
+	
+	@ApiOperation(value="Returns the customers")
+	@RequestMapping(method=RequestMethod.GET,value="/customers")
+	public ResponseEntity<List<CustomerDetails>> getCustomers() throws DeviceNotFoundException{
+		ResponseEntity<List<CustomerDetails>> response = null;
+		
+		try{
+			response = restTemplate.exchange(
+						uriForCustomer,
+						HttpMethod.GET,
+						null,
+						new ParameterizedTypeReference<List<CustomerDetails>>() {
+						});
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+		if(response==null)
+			throw new DeviceNotFoundException("Customer is not available.");
 
 		return response;
 	}
@@ -99,5 +120,8 @@ public class ConsumerController
 			errorMessage.setErrorMessage(ex.getMessage());
 			return new ResponseEntity<ErrorMessage>(errorMessage,HttpStatus.NOT_FOUND);
 	}
+	
+	
+	
 	
 } 

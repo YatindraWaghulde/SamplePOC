@@ -42,7 +42,7 @@ public class CustomerDetails implements Serializable{
 	private Date dob;
 	
 	@ApiModelProperty(notes = "device number (card number) ")
-	@OneToMany(cascade=CascadeType.ALL,fetch = FetchType.LAZY)
+	@OneToMany(cascade=CascadeType.ALL,fetch = FetchType.EAGER)
 	@JoinColumn(name = "customer_id",referencedColumnName="customer_id")
 	private List<DeviceDetails> deviceDetails ;
 	

@@ -23,13 +23,17 @@ spring:
 # properties for Security     
 server:
   port: 2020
-#  ssl:
-#    key-store: classpath:TestSigner.jks
-#    key-alias: ovfc
-#    key-store-type: JKS
-#    key-store-provider: SUN
-#    enabled: true
-#    key-password: changeit
+  ssl:
+     client-auth: need
+     enabled: true
+     key-password: s3cr3t
+     key-store: classpath:server.jks
+     key-store-password: s3cr3t
+#     protocol: TLSv1.2
+     trust-store: classpath:server.jks
+     trust-store-password: s3cr3t
+     
+
 
 #Logging
 logging:

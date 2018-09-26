@@ -1,23 +1,20 @@
-package com.demo.poc.model;
+package com.demo.poc.vo;
 
 import java.io.Serializable;
 import java.util.Date;
 
-import io.swagger.annotations.ApiModelProperty;
-
-public class DeviceDetails implements Serializable{
+public class DeviceDetailsVO implements Serializable{
 
 	private static final long serialVersionUID = -8658798312716361398L;
-	public DeviceDetails() {
+	public DeviceDetailsVO() {
 	}
-	@ApiModelProperty
 	private Long deviceNumber;
 	private String deviceType;
 	private Date expDate;
 	private Integer txnLimit;
 	
 	
-	public DeviceDetails(Long deviceNumber, String deviceType, Date expDate, Integer txnLimit) {
+	public DeviceDetailsVO(Long deviceNumber, String deviceType, Date expDate, Integer txnLimit) {
 		super();
 		this.deviceNumber = deviceNumber;
 		this.deviceType = deviceType;
@@ -36,6 +33,8 @@ public class DeviceDetails implements Serializable{
 	public void setTxnLimit(Integer txnLimit) {
 		this.txnLimit = txnLimit;
 	}
+	
+	
 	public Long getDeviceNumber() {
 		return deviceNumber;
 	}

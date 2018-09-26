@@ -26,12 +26,25 @@ public class DeviceDetails implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer deviceNumber;
+	private Long deviceNumber;
 	
 	private String deviceType;
 	private Date expDate;
 	private Integer txnLimit;
 	
+	public Long getDeviceNumber() {
+		return deviceNumber;
+	}
+	public String getDeviceType() {
+		return deviceType;
+	}
+	public Date getExpDate() {
+		return expDate;
+	}
+	public Integer getTxnLimit() {
+		return txnLimit;
+	}
+
 	@JsonIgnore
 	 @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
 	 @JoinColumn(name = "customer_id")
@@ -45,7 +58,7 @@ public class DeviceDetails implements Serializable{
 		this.customerDetails = customerDetails;
 	}
 	
-	public DeviceDetails(Integer deviceNumber, String deviceType, Date expDate, Integer txnLimit,CustomerDetails customerDetails) {
+	public DeviceDetails(Long deviceNumber, String deviceType, Date expDate, Integer txnLimit,CustomerDetails customerDetails) {
 		super();
 		this.deviceNumber = deviceNumber;
 		this.deviceType = deviceType;
@@ -53,7 +66,7 @@ public class DeviceDetails implements Serializable{
 		this.txnLimit = txnLimit;
 		this.customerDetails = customerDetails;
 	}
-	public void setDeviceNumber(Integer deviceNumber) {
+	public void setDeviceNumber(Long deviceNumber) {
 		this.deviceNumber = deviceNumber;
 	}
 	public void setDeviceType(String deviceType) {
